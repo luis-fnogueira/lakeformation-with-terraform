@@ -7,15 +7,15 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "state-903442739132"
-    key     = "lakeformation-state/"
+    bucket  = "<your-bucket>"
+    key     = "<key>"
     region  = "us-east-1"
-    profile = "luis"
+    profile = "<profile>"
   }
 }
 
 provider "aws" {
   region  = "us-east-1"
-  profile = "luis"
+  profile = "<profile>"
 }
 

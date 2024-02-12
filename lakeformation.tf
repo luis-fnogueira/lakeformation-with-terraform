@@ -3,8 +3,8 @@ resource "aws_lakeformation_resource" "data_lake_landing" {
 }
 
 resource "aws_lakeformation_permissions" "lakeformation_permissions" {
-  principal   = "arn:aws:iam::903442739132:user/luis"
-  permissions = ["ALL"]
+  principal   = var.lake_formation_principal_permission
+  permissions = var.lakeformation_permissions
 
   database {
     name = aws_glue_catalog_database.datalake_database_landing.name
